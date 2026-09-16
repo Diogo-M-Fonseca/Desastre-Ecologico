@@ -14,11 +14,11 @@ public class objectMovement : MonoBehaviour
         _velocity = Random.Range(velocityBreak.x, velocityBreak.y);
         _rare = Random.Range(0, 100);
     }
-    void Update()
+    void FixedUpdate()
     {
         if (_rare > 1)
-            _controller.linearVelocity = _velocity * Vector3.forward * Time.deltaTime;
+            _controller.linearVelocity = _velocity * Vector3.forward * Time.fixedDeltaTime;
         else
-            _controller.linearVelocity = 2000 * Vector3.forward * Time.deltaTime;
+            _controller.linearVelocity = 2000 * Vector3.forward * Time.fixedDeltaTime;
     }
 }
