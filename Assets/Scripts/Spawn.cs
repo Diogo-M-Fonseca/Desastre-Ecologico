@@ -7,7 +7,7 @@ public class Spawn : MonoBehaviour
 {
     [SerializeField] private List<Transform> spawnPoints;
     [SerializeField] private Vector2 spawnBreaks;
-    [SerializeField] private GameObject prefab;
+    [SerializeField] private GameObject[] prefab;
 
     private float _timer;
     private float _value;
@@ -26,7 +26,7 @@ public class Spawn : MonoBehaviour
         {
             _lastTransform = spawnPoints[Random.Range(0, spawnPoints.Count)];
             if (_readd) spawnPoints.Add(_readd);
-            Instantiate(prefab, _lastTransform);
+            Instantiate(prefab[Random.Range(0, prefab.Length)], _lastTransform);
             spawnPoints.Remove(_lastTransform);
             _timer = 0.0f;
         }
