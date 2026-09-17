@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4498588720050119136}
   - component: {fileID: 4419102607647140949}
+  - component: {fileID: 8432099942376755832}
   m_Layer: 0
   m_Name: Collider (1)
   m_TagString: Untagged
@@ -47,12 +48,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 0.1756401, z: 0.8844511}
   m_Center: {x: 2.4731172e-17, y: -0.020004675, z: 0.05777406}
+--- !u!114 &8432099942376755832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2761926172762119809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4ffed15725ed488b40acc769a9925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Scripts::TriggerEnd
 --- !u!1 &3934203728301111907
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +76,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5045194830813994398}
   - component: {fileID: 3414533689726000993}
+  - component: {fileID: 7390959844098545176}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -100,12 +114,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 0.1756401, z: 1}
   m_Center: {x: 0, y: -0.020004675, z: 0}
+--- !u!114 &7390959844098545176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934203728301111907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4ffed15725ed488b40acc769a9925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Scripts::TriggerEnd
 --- !u!1001 &5582893974910398867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209,7 +235,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &699993556262006198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +266,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 2, y: 0.00000012107193, z: 2}
   m_Center: {x: 0, y: 0, z: 0}

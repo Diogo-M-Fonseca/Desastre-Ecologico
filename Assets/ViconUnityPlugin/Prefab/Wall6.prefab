@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7224830039303326099}
   - component: {fileID: 444282597266028199}
+  - component: {fileID: 6532863887802276927}
   m_Layer: 0
   m_Name: Collider (2)
   m_TagString: Untagged
@@ -47,12 +48,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.3823719, y: 0.19343254, z: 4.9247184}
   m_Center: {x: -0.18802452, y: -0.40329695, z: -1.4750214}
+--- !u!114 &6532863887802276927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2936117643125735955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4ffed15725ed488b40acc769a9925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Scripts::TriggerEnd
 --- !u!1 &3950767460901922172
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +76,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2559853888267432285}
   - component: {fileID: 6809195037598924985}
+  - component: {fileID: 3016438872016169460}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -100,12 +114,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.37359905, y: 0.19343254, z: 1.9520679}
   m_Center: {x: -0.28006983, y: -0.40329206, z: 0.011301489}
+--- !u!114 &3016438872016169460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3950767460901922172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4ffed15725ed488b40acc769a9925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Scripts::TriggerEnd
 --- !u!1 &5662481539696714659
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3961934089139911294}
   - component: {fileID: 8188827088386400821}
+  - component: {fileID: 7549765741766052156}
   m_Layer: 0
   m_Name: Collider (1)
   m_TagString: Untagged
@@ -153,12 +180,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.37359905, y: 0.19343254, z: 1.9520679}
   m_Center: {x: -0.28006983, y: -0.40329206, z: 0.011301489}
+--- !u!114 &7549765741766052156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5662481539696714659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4ffed15725ed488b40acc769a9925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Scripts::TriggerEnd
 --- !u!1 &8057311775245057446
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564994533011582691}
   - component: {fileID: 735075119273016960}
+  - component: {fileID: 4597848306515247232}
   m_Layer: 0
   m_Name: Collider (3)
   m_TagString: Untagged
@@ -206,12 +246,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.3823719, y: 0.19343254, z: 4.9247184}
   m_Center: {x: -0.18802452, y: -0.40329695, z: -1.4750214}
+--- !u!114 &4597848306515247232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8057311775245057446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4ffed15725ed488b40acc769a9925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Scripts::TriggerEnd
 --- !u!1001 &986998917672731498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,7 +373,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &-6782852567096626977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +404,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 2, y: 0.09999998, z: 1.9999998}
   m_Center: {x: 0, y: -0.04999999, z: 0}
