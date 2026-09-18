@@ -15,6 +15,14 @@ public class Spawn : MonoBehaviour
     private Transform _readd;
     void Update()
     {
+        foreach (var item in spawnPoints)
+        {
+            if (item.gameObject.activeSelf == false)
+            {
+                item.gameObject.SetActive(true);
+            }
+        }
+
         _readd = _lastTransform ? _lastTransform : null;
 
         if (_timer == 0.0f)

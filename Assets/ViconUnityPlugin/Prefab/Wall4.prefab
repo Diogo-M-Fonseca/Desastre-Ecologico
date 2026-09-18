@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7280d2078716acf49b64d5ec7e232cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Scripts::objectMovement
-  velocityBreak: {x: 50, y: 50}
+  _velocity: 50
 --- !u!65 &3871373855870227213
 BoxCollider:
   m_ObjectHideFlags: 0
