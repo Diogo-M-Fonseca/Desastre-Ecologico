@@ -82,8 +82,19 @@ public delegate void ConnectionCallback(bool i_bConnected);
       print("Failed to create logs: " + ClientPathName + ", " + StreamPathName);
     }
   }
+    void Awake()
+    {
+        ViconDataStreamClient obj = GameObject.FindAnyObjectByType<ViconDataStreamClient>();
 
-  void Start()
+        if (obj != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    void Start()
   {
     m_Client = new Client();
     m_RetimingClient = new RetimingClient();

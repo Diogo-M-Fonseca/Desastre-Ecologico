@@ -470,7 +470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114105437160752742, guid: d221fcd7e2204224482131e4cc789b6e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1917,7 +1917,8 @@ MonoBehaviour:
   - {fileID: 1665586538}
   - {fileID: 1286798579}
   spawnBreaks: {x: 10, y: 10}
-  prefab: {fileID: 8974784692094897803, guid: 3836c2aefc860644d8f7e2c73308a8f6, type: 3}
+  prefab:
+  - {fileID: 8974784692094897803, guid: 3836c2aefc860644d8f7e2c73308a8f6, type: 3}
 --- !u!4 &1785917229
 Transform:
   m_ObjectHideFlags: 0

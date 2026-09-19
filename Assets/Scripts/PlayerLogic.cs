@@ -9,7 +9,6 @@ public class PlayerLogic : MonoBehaviour
 
     public void Death()
     {
-       Debug.Log("Player has died.");
        gameObject.SetActive(false);
        uiScript.ShowEndUI();
         uiScript.PointingPoints(Points);
@@ -20,11 +19,9 @@ public class PlayerLogic : MonoBehaviour
     {
         if (gameObject.activeSelf == false)
         {
-            Debug.Log("Player is dead. Cannot point up.");
             return;
         }
         point++;
-        Debug.Log("Player has pointed up." + Points);
         uiScript.PointingPoints(Points);
     }
 

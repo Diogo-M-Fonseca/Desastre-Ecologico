@@ -21,6 +21,7 @@ public class uiScript : MonoBehaviour
 
     public void RestartGame()
     {
+        Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 

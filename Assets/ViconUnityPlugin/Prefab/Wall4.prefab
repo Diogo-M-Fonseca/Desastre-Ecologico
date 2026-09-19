@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6255602863819382295}
   - component: {fileID: 4476110483750034443}
+  - component: {fileID: 7618064485348741439}
   m_Layer: 0
   m_Name: Colider (3)
   m_TagString: Untagged
@@ -47,12 +48,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.2091787, y: 0.7465934, z: 1}
   m_Center: {x: 0.06903985, y: 0.15820378, z: 0}
+--- !u!114 &7618064485348741439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549881076897226828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4ffed15725ed488b40acc769a9925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Scripts::TriggerEnd
 --- !u!1 &3504543148153979791
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +76,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8869009396869247480}
   - component: {fileID: 6116527560313456448}
+  - component: {fileID: 2256595694568146678}
   m_Layer: 0
   m_Name: Colider (2)
   m_TagString: Untagged
@@ -100,12 +114,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.2091787, y: 0.7465934, z: 1}
   m_Center: {x: 0.06903985, y: 0.15820378, z: 0}
+--- !u!114 &2256595694568146678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3504543148153979791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4ffed15725ed488b40acc769a9925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Scripts::TriggerEnd
 --- !u!1 &8031834567135597907
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2188982952853804094}
   - component: {fileID: 424631753201708342}
+  - component: {fileID: 1177469977320845578}
   m_Layer: 0
   m_Name: Colider
   m_TagString: Untagged
@@ -153,12 +180,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.0315337, y: 0.42060757, z: 1}
   m_Center: {x: -0.4713825, y: -0.8040269, z: 0}
+--- !u!114 &1177469977320845578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8031834567135597907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4ffed15725ed488b40acc769a9925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &8154716627893397742
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7532762629471401545}
   - component: {fileID: 2956303439202869830}
+  - component: {fileID: 8422499073925076591}
   m_Layer: 0
   m_Name: Colider (1)
   m_TagString: Untagged
@@ -206,12 +246,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.57722384, y: 1.6210175, z: 1}
   m_Center: {x: -0.3496557, y: 0.7928015, z: 0}
+--- !u!114 &8422499073925076591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154716627893397742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d4ffed15725ed488b40acc769a9925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Scripts::TriggerEnd
 --- !u!1001 &1797180723409542479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,7 +373,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &228492938067636705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7280d2078716acf49b64d5ec7e232cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Scripts::objectMovement
-  velocityBreak: {x: 50, y: 50}
+  _velocity: 50
 --- !u!65 &3871373855870227213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -352,7 +404,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 2, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: -0.5}

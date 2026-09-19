@@ -8,6 +8,7 @@ public class Filter : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerLogic>() == false)
         {
             playerLogic.PointUp();
+            other.transform.parent.gameObject.SetActive(false);
             other.gameObject.SetActive(false);
         }
     }

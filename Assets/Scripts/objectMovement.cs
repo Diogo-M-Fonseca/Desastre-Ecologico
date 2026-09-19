@@ -3,15 +3,13 @@ using System.Collections;
 
 public class objectMovement : MonoBehaviour
 {
-    [SerializeField] private Vector2 velocityBreak;
     private Rigidbody _controller;
-    private float _velocity;
+    [SerializeField] private float _velocity;
     private float _rare;
 
     void Start()
     {
         _controller = GetComponent<Rigidbody>();
-        _velocity = Random.Range(velocityBreak.x, velocityBreak.y);
         _rare = Random.Range(0, 100);
     }
     void FixedUpdate()
