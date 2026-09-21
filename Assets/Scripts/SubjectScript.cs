@@ -18,7 +18,12 @@ namespace UnityVicon
 
     public ViconDataStreamClient Client;
 
-    public SubjectScript()
+        private void Start()
+        {
+            Client = ViconDataStreamClient.Instance;
+        }
+
+        public SubjectScript()
     {
     }
 

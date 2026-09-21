@@ -82,16 +82,19 @@ public delegate void ConnectionCallback(bool i_bConnected);
       print("Failed to create logs: " + ClientPathName + ", " + StreamPathName);
     }
   }
-    void Awake()
-    {
-        ViconDataStreamClient obj = GameObject.FindAnyObjectByType<ViconDataStreamClient>();
 
-        if (obj != this)
+    public static ViconDataStreamClient Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
+            return;
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
