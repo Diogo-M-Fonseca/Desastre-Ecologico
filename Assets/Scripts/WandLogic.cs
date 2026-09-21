@@ -19,6 +19,8 @@ public class WandLogic : MonoBehaviour
     [SerializeField] private float fireballSpeed = 15f;
     [SerializeField] private float fireballLifetime = 5f;
 
+    [SerializeField] private FireStarter fireStarter;
+
     private float shakes;
     private float charge;
     private float lastY;
@@ -106,7 +108,9 @@ public class WandLogic : MonoBehaviour
             rb.useGravity = false;
             rb.AddForce(origin.forward * fireballSpeed, ForceMode.VelocityChange);
 
-            Destroy(ball, fireballLifetime);
+            FireBall fb = ball.GetComponent<FireBall>();
+            if (fb == null) fb = ball.AddComponent<FireBall>();
+            fb.Init(fireballLifetime, fireStarter);
         }
         else
         {
