@@ -4,8 +4,7 @@ public class FireStarter : MonoBehaviour
 {
     [SerializeField] private GameObject[] fires;
 
-
-    public void StartFire()
+    private void Start()
     {
         foreach (GameObject fire in fires)
         {

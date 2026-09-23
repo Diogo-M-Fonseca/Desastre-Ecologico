@@ -13,9 +13,10 @@ public class FireBall : MonoBehaviour
 
     private void Start()
     {
-        Invoke(nameof(EndOfLife), lifetime);
+        //Invoke(nameof(EndOfLife), lifetime);
     }
 
+    /*
     private void EndOfLife()
     {
         if (fireStarter != null)
@@ -23,4 +24,5 @@ public class FireBall : MonoBehaviour
 
         Destroy(gameObject);
     }
+    */
 }

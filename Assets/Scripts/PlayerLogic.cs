@@ -9,8 +9,8 @@ public class PlayerLogic : MonoBehaviour
 
     public void Death()
     {
-       gameObject.SetActive(false);
-       uiScript.ShowEndUI();
+        gameObject.SetActive(false);
+        uiScript.ShowEndUI();
         uiScript.PointingPoints(Points);
         Time.timeScale = 0f; 
     }
