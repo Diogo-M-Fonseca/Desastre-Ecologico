@@ -6,12 +6,12 @@ public class PlayerCollider : MonoBehaviour
 
     public PlayerLogic Player => player;
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<PlayerLogic>() == false
             && collision.gameObject.GetComponent<Catch>() == false)
         {
             Player.Death();
         }
-    }
+    }*/
 }
