@@ -8,6 +8,7 @@ public class PlateScript : MonoBehaviour
         if (collision.gameObject == FindAnyObjectByType<PlayerLogic>().gameObject)
         {
             FindAnyObjectByType<ChestScript>().ActivatePlate(plateNumber);
+            Debug.Log("Plate " + plateNumber + " activated.");
         }
     }
 
@@ -16,6 +17,7 @@ public class PlateScript : MonoBehaviour
         if (collision.gameObject == FindAnyObjectByType<PlayerLogic>().gameObject)
         {
             FindAnyObjectByType<ChestScript>().DeactivatePlate(plateNumber);
+            Debug.Log("Plate " + plateNumber + " deactivated.");
         }
     }
 }
