@@ -3,7 +3,12 @@ guid: 14828e1707ef7544ba4abffcffa86a36
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UniV_Grid_2K
+    second: {fileID: 2100000, guid: 309f83ee9563b284ca4c5dea55710c3e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea423dd56a8aaa24083dbb3d6879518a
+guid: eedd88fa95b741649a33158d8b3e3b78
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: UniV_Grid_2K
-    second: {fileID: 2100000, guid: b176e1bc473bca94092ff513faad116a, type: 2}
+    second: {fileID: 2100000, guid: 2638d092703da0a44a785ed3233f0d5d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
