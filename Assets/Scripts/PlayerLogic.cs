@@ -8,7 +8,6 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField] private RunData run;
     [SerializeField] private float timer;
     [SerializeField] private float sceneTransitionTime;
-    [SerializeField] private Scene[] games;
     [SerializeField] private Slider slider;
 
     private float _actualTime;
@@ -49,6 +48,8 @@ public class PlayerLogic : MonoBehaviour
 
             StartCoroutine(ChangeMiniGame());
         }
+
+        Debug.Log("Is Finished?: "+_isFinished);
     }
 
     private IEnumerator ChangeMiniGame()
@@ -56,7 +57,7 @@ public class PlayerLogic : MonoBehaviour
         Debug.Log("Cabou");
         yield return null;
 
-        SceneManager.LoadScene(games[Random.Range(0, games.Length)].buildIndex);
+        SceneManager.LoadScene(run.scenes[Random.Range(0, run.scenes.Length)]);
     }
 
     public void GameFinished()

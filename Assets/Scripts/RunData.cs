@@ -4,4 +4,5 @@ using UnityEngine;
 public class RunData : ScriptableObject
 {
     public float gamesWon, gamesLost, timeTaken;
+    public string[] scenes;
 }

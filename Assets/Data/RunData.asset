@@ -15,3 +15,7 @@ MonoBehaviour:
   gamesWon: 0
   gamesLost: 0
   timeTaken: 0
+  scenes:
+  - Medieval Myriad3
+  - Medieval Myriad1
+  - Medieval Myriad2
