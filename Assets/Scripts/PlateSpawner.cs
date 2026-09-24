@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlateSpawner : MonoBehaviour
 {
@@ -13,8 +13,6 @@ public class PlateSpawner : MonoBehaviour
     [SerializeField] private bool randomYaw = true;
 
     public event Action LevelDone;
-
-
 
     private void Start()
     {
@@ -41,7 +39,7 @@ public class PlateSpawner : MonoBehaviour
                 : Quaternion.identity;
 
             if (randomYaw)
-                rotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+                rotation *= Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f);
 
             spawned.Add(Instantiate(prefab, position, rotation, transform));
         }
@@ -56,9 +54,9 @@ public class PlateSpawner : MonoBehaviour
         for (int i = 0; i < maxAttempts; i++)
         {
             Vector3 origin = new Vector3(
-                Random.Range(b.min.x, b.max.x),
+                UnityEngine.Random.Range(b.min.x, b.max.x),
                 b.max.y + 1f,
-                Random.Range(b.min.z, b.max.z));
+                UnityEngine.Random.Range(b.min.z, b.max.z));
 
             if (floor.Raycast(new Ray(origin, Vector3.down), out hit, b.size.y + 2f))
                 return true;
