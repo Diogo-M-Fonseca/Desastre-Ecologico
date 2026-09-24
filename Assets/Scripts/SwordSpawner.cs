@@ -10,7 +10,7 @@ public class SwordSpawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == this.gameObject)
+        if(other.TryGetComponent(out PlayerCollider _))
         {
             SpawnSword();
         }

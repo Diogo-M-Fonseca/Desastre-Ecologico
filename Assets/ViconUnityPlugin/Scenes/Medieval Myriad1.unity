@@ -272,7 +272,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 46
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -298,13 +298,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182708748}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 3, z: -1.5}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 7.25, z: 1.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &182708752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,7 +1159,7 @@ Transform:
   m_GameObject: {fileID: 754449847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1298, y: -0.15, z: 1.0551}
+  m_LocalPosition: {x: 0.1298, y: -0.004, z: 1.0551}
   m_LocalScale: {x: 0.46162674, y: 1, z: 0.5389138}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1395,6 +1395,10 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 957798980709930059, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
+      propertyPath: m_Size.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 957798980709930059, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -1402,6 +1406,10 @@ PrefabInstance:
       propertyPath: run
       value: 
       objectReference: {fileID: 11400000, guid: 62a2140ed3e9b004481d08f1961525b8, type: 2}
+    - target: {fileID: 5416366573828940067, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
+      propertyPath: timer
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 5416366573828940067, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
       propertyPath: slider
       value: 
@@ -1416,6 +1424,10 @@ PrefabInstance:
       objectReference: {fileID: 1080022295}
     - target: {fileID: 7876737060566772565, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
       propertyPath: m_Size.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876737060566772565, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
+      propertyPath: m_Size.z
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7876737060566772565, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}

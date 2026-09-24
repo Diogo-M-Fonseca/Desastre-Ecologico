@@ -69,7 +69,6 @@ public class PlayerLogic : MonoBehaviour
     {
         gameObject.SetActive(false);
         uiScript.ShowEndUI();
-        uiScript.PointingPoints(Points);
         Time.timeScale = 0f; 
     }
 
@@ -80,6 +79,5 @@ public class PlayerLogic : MonoBehaviour
             return;
         }
         point++;
-        uiScript.PointingPoints(Points);
     }
 }

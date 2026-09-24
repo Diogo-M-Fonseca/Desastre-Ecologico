@@ -25,12 +25,4 @@ public class uiScript : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
-    public void PointingPoints(int point)
-    {
-       foreach (Text text in pointUI)
-       {
-           text.text = "Points: " + point.ToString();
-       }
-    }
-
 }
