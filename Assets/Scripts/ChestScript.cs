@@ -5,6 +5,7 @@ public class ChestScript : MonoBehaviour
     private bool plate1Activated = false;
     private bool plate2Activated = false;
     private bool plate3Activated = false;
+    private bool plate4Activated = false;
 
     public void ActivatePlate(int plateNumber)
     {
@@ -19,8 +20,11 @@ public class ChestScript : MonoBehaviour
             case 3:
                 plate3Activated = true;
                 break;
+            case 4:
+                plate4Activated = true;
+                break;
         }
-        if (plate1Activated && plate2Activated && plate3Activated)
+        if (plate1Activated && plate2Activated && plate3Activated && plate4Activated)
         {
             OpenChest();
         }
@@ -38,6 +42,9 @@ public class ChestScript : MonoBehaviour
                 break;
             case 3:
                 plate3Activated = false;
+                break;
+            case 4:
+                plate4Activated = false;
                 break;
         }
     }

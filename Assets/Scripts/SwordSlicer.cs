@@ -45,7 +45,7 @@ public class SwordSlicer : MonoBehaviour
         SetupPiece(upper, target, planeNormal);
         SetupPiece(lower, target, -planeNormal);
 
-        Destroy(target);
+        target.SetActive(false);
     }
 
     void SetupPiece(GameObject piece, GameObject original, Vector3 pushDir)

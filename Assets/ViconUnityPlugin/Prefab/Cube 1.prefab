@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 234834810841131592}
   - component: {fileID: 7389382233287493810}
   - component: {fileID: -6394624609434922758}
-  - component: {fileID: 5033848726258724816}
-  - component: {fileID: -1549820122659754645}
   m_Layer: 6
   m_Name: Cube 1
   m_TagString: Untagged
@@ -142,28 +140,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 118
   m_CollisionDetection: 0
---- !u!114 &5033848726258724816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8974784692094897803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7280d2078716acf49b64d5ec7e232cfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Scripts::objectMovement
-  _velocity: 50
---- !u!114 &-1549820122659754645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8974784692094897803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7436ae6b57de89144b1afd42c6d6e183, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Scripts::DeleteCube
