@@ -3,6 +3,13 @@ using UnityEngine;
 public class PlateScript : MonoBehaviour
 {
     [SerializeField] private int plateNumber;
+    private PlateSpawner plateSpawner;
+
+    private void Start()
+    {
+        
+    }
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject == FindAnyObjectByType<PlayerLogic>().gameObject)
