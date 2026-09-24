@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,10 @@ public class PlateSpawner : MonoBehaviour
     [SerializeField] private float heightOffset = 0f;
     [SerializeField] private bool alignToGround = false;
     [SerializeField] private bool randomYaw = true;
+
+    public event Action LevelDone;
+
+
 
     private void Start()
     {
@@ -38,7 +43,7 @@ public class PlateSpawner : MonoBehaviour
             if (randomYaw)
                 rotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
 
-            spawned.Add(Instantiate(prefab, position, rotation));
+            spawned.Add(Instantiate(prefab, position, rotation, transform));
         }
 
         return spawned;
