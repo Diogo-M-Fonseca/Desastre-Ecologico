@@ -40,6 +40,15 @@ public class PlayerLogic : MonoBehaviour
 
             StartCoroutine(ChangeMiniGame());
         }
+
+        if( _isFinished)
+        {
+            run.gamesWon++;
+
+            //YeeyAnimation
+
+            StartCoroutine(ChangeMiniGame());
+        }
     }
 
     private IEnumerator ChangeMiniGame()
@@ -48,6 +57,11 @@ public class PlayerLogic : MonoBehaviour
         yield return null;
 
         SceneManager.LoadScene(games[Random.Range(0, games.Length)].buildIndex);
+    }
+
+    public void GameFinished()
+    {
+        _isFinished = true;
     }
 
     public void Death()

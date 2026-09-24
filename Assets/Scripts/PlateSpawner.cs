@@ -11,8 +11,9 @@ public class PlateSpawner : MonoBehaviour
     [SerializeField] private float heightOffset = 0f;
     [SerializeField] private bool alignToGround = false;
     [SerializeField] private bool randomYaw = true;
+    [SerializeField] private PlayerLogic player;
 
-    public event Action LevelDone;
+    private int _manyPressed = 0;
 
     private void Start()
     {
@@ -41,10 +42,29 @@ public class PlateSpawner : MonoBehaviour
             if (randomYaw)
                 rotation *= Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f);
 
-            spawned.Add(Instantiate(prefab, position, rotation, transform));
+            GameObject newPlate = Instantiate(prefab, position, rotation, transform);
+            spawned.Add(newPlate);
+            PlateScript script = newPlate.GetComponent<PlateScript>();
+            script.IsPressed += VerifyComplete;
+            script.IsUnpressed += RemoveComplete;
         }
 
         return spawned;
+    }
+
+    private void VerifyComplete()
+    {
+        _manyPressed++;
+
+        if (_manyPressed == platePrefabs.Length)
+        {
+            player.GameFinished();
+        }
+    }
+
+    private void RemoveComplete()
+    {
+        _manyPressed--;
     }
 
     private bool TryGetRandomGroundPoint(out RaycastHit hit)

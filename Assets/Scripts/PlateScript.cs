@@ -1,21 +1,11 @@
+using System;
 using UnityEngine;
 
 public class PlateScript : MonoBehaviour
 {
     [SerializeField] private int plateNumber;
-    private PlateSpawner plateSpawner;
-    private bool _isPressed;
-
-    private void Start()
-    {
-        plateSpawner = GetComponentInParent<PlateSpawner>();
-
-        plateSpawner.LevelDone += Pressing;
-        plateSpawner.LevelDone += Unpressing;
-    }
-
-    private void Pressing() => _isPressed = true;
-    private void Unpressing() => _isPressed = false;
+    public event Action IsPressed;
+    public event Action IsUnpressed;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -23,6 +13,8 @@ public class PlateScript : MonoBehaviour
         {
             FindAnyObjectByType<ChestScript>().ActivatePlate(plateNumber);
             Debug.Log("Plate " + plateNumber + " activated.");
+
+            IsPressed.Invoke();
         }
     }
 
@@ -32,6 +24,8 @@ public class PlateScript : MonoBehaviour
         {
             FindAnyObjectByType<ChestScript>().DeactivatePlate(plateNumber);
             Debug.Log("Plate " + plateNumber + " deactivated.");
+
+            IsUnpressed.Invoke();
         }
     }
 }
