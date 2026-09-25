@@ -25,6 +25,10 @@ public class ChangeScene : MonoBehaviour
                 isActive = true;
                 SceneManager.LoadScene(run.GetScene());
             }
+            else if (nextScene == SceneManager.GetSceneByBuildIndex(0).name)
+            {
+                SceneManager.LoadScene(0);
+            }
             else Application.Quit();
         }
     }
