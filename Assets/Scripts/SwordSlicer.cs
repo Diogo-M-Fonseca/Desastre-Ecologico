@@ -66,7 +66,7 @@ public class SwordSlicer : MonoBehaviour
         piece.transform.SetParent(original.transform.parent, true);
         piece.transform.position = original.transform.position;
         piece.transform.rotation = original.transform.rotation;
-        piece.transform.localScale = original.transform.lossyScale;
+        piece.transform.localScale = original.transform.localScale;
 
         piece.layer = original.layer;
 

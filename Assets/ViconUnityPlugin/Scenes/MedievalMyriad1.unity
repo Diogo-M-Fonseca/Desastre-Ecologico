@@ -1754,6 +1754,10 @@ PrefabInstance:
       propertyPath: Client
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8343999846702046001, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
+      propertyPath: SubjectName
+      value: P2
+      objectReference: {fileID: 0}
     - target: {fileID: 8422869228980715548, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
