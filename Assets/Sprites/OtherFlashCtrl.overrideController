@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OtherFlashCtrl
+  m_Controller: {fileID: 9100000, guid: 996a30095d8d2314084187b0e3841ab2, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: cbb4bc80389e9174dbc5e330bc8830fb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 18888d8c57cd1704798916d5d66f1048, type: 2}

@@ -6,11 +6,14 @@ public class ShowResult : MonoBehaviour
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private RunData run;
     [SerializeField] private float timeUntilDisappear = 5f;
+    [SerializeField] private bool doesntManage;
     private float _timer;
     private Image _renderer;
 
     private void Start()
     {
+        if (doesntManage) return;
+        
         _renderer = GetComponent<Image>();
 
         switch (run.CalculateScore())
