@@ -6,17 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/MyriadInit.unity
+    guid: b5f8f3d91d7dd684a84eb360fbbefc17
   - enabled: 1
-    path: Assets/ViconUnityPlugin/Scenes/Medieval Myriad3.unity
-    guid: 303cdd098d6a76b47942c56f83f74bd6
-  - enabled: 1
-    path: Assets/ViconUnityPlugin/Scenes/Medieval Myriad1.unity
+    path: Assets/ViconUnityPlugin/Scenes/MedievalMyriad1.unity
     guid: 166727778125e2d41adf159d32527c96
   - enabled: 1
-    path: Assets/ViconUnityPlugin/Scenes/Medieval Myriad2.unity
+    path: Assets/ViconUnityPlugin/Scenes/MedievalMyriad2.unity
     guid: 8a7961016ffbb0f40ac01f630183ac71
+  - enabled: 1
+    path: Assets/ViconUnityPlugin/Scenes/MedievalMyriad3.unity
+    guid: 303cdd098d6a76b47942c56f83f74bd6
+  - enabled: 1
+    path: Assets/ViconUnityPlugin/Scenes/MedievalMyriad4.unity
+    guid: 758792d4ad6add34181df2c1a09f2f77
+  - enabled: 1
+    path: Assets/Scenes/MyriadFinal.unity
+    guid: adfb79f399701bd4dadb768ce322c0bd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

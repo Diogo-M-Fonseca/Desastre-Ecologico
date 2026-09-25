@@ -1,5 +1,6 @@
 using UnityEngine;
 using EzySlice;
+using System;
 
 
 public class SwordSlicer : MonoBehaviour
@@ -15,6 +16,9 @@ public class SwordSlicer : MonoBehaviour
     private Vector3 tipVelocity;
 
     void Start() => lastTipPos = bladeTip.position;
+
+    public event Action EnemyCut;
+    private Rigidbody lastTarget;
 
     void FixedUpdate()
     {
@@ -46,13 +50,19 @@ public class SwordSlicer : MonoBehaviour
         SetupPiece(lower, target, -planeNormal);
 
         target.SetActive(false);
+        Rigidbody rb = target.GetComponentInParent<Rigidbody>();
+
+        if (lastTarget != rb)
+            EnemyCut?.Invoke();
+
+        lastTarget = rb;
     }
 
     void SetupPiece(GameObject piece, GameObject original, Vector3 pushDir)
     {
         if (piece == null) return;
 
-        // Preserva o parent do original, mantendo a posição/rotação no mundo
+        // Preserva o parent do original, mantendo a posiï¿½ï¿½o/rotaï¿½ï¿½o no mundo
         piece.transform.SetParent(original.transform.parent, true);
         piece.transform.position = original.transform.position;
         piece.transform.rotation = original.transform.rotation;

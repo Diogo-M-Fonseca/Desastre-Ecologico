@@ -1,13 +1,19 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class CatchManager : MonoBehaviour
 {
     [SerializeField] private Vector2 timeBreak;
     [SerializeField] private GameObject[] balls;
+    [SerializeField] private PlayerLogic player;
+    [SerializeField] private SwordSlicer sword;
+
+    private int ballsAwake;
     private void Start()
     {
         StartCoroutine(SpawnRoutine());    
+        sword.EnemyCut += CheckDummies;
     }
 
     private IEnumerator SpawnRoutine()
@@ -23,5 +29,13 @@ public class CatchManager : MonoBehaviour
 
             if(!isActive) ball.SetActive(true);
         }
+    }
+
+    private void CheckDummies()
+    {
+        ballsAwake++;
+
+        if (ballsAwake == balls.Count())
+            player.GameFinished();
     }
 }

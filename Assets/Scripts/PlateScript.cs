@@ -11,9 +11,6 @@ public class PlateScript : MonoBehaviour
     {
         if (collision.TryGetComponent(out PlayerCollider _))
         {
-            FindAnyObjectByType<ChestScript>().ActivatePlate(plateNumber);
-            Debug.Log("Plate " + plateNumber + " activated.");
-
             IsPressed.Invoke();
         }
     }
@@ -22,9 +19,6 @@ public class PlateScript : MonoBehaviour
     {
         if (collision.TryGetComponent(out PlayerCollider _))
         {
-            FindAnyObjectByType<ChestScript>().DeactivatePlate(plateNumber);
-            Debug.Log("Plate " + plateNumber + " deactivated.");
-
             IsUnpressed.Invoke();
         }
     }

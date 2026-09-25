@@ -20,6 +20,7 @@ public class PlayerLogic : MonoBehaviour
 
     private void Start()
     {
+        if(slider==null) return;
         slider.value = 1;
         _actualTime = timer;
         _isFinished = false;
@@ -27,6 +28,8 @@ public class PlayerLogic : MonoBehaviour
 
     private void Update()
     {
+        if(slider==null) return;
+
         _actualTime -= Time.deltaTime;
         slider.value = _actualTime/timer;
 
@@ -57,7 +60,7 @@ public class PlayerLogic : MonoBehaviour
         Debug.Log("Cabou");
         yield return null;
 
-        SceneManager.LoadScene(run.scenes[Random.Range(0, run.scenes.Length)]);
+        SceneManager.LoadScene(run.GetScene());
     }
 
     public void GameFinished()
