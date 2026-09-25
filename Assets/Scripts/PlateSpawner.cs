@@ -55,6 +55,7 @@ public class PlateSpawner : MonoBehaviour
     private void VerifyComplete()
     {
         _manyPressed++;
+        Debug.Log($"Pressed {_manyPressed} of {platePrefabs.Length}");
 
         if (_manyPressed == platePrefabs.Length)
         {
