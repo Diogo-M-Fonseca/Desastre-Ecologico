@@ -1,6 +1,7 @@
-using UnityEngine;
 using EzySlice;
 using System;
+using UnityEngine;
+using UnityEngine.Audio;
 
 
 public class SwordSlicer : MonoBehaviour
@@ -11,14 +12,37 @@ public class SwordSlicer : MonoBehaviour
     [SerializeField] private Material crossSectionMaterial;
     [SerializeField] private float minSwingSpeed = 1.5f;
     [SerializeField] private float separationForce = 2f;
+    private AudioSource audioSource;
+    private Rigidbody rb;
+    [SerializeField] private Vector3 lastPosition;
+    [SerializeField] private float moveThreshold = 2.0f;
 
     private Vector3 lastTipPos;
     private Vector3 tipVelocity;
 
-    void Start() => lastTipPos = bladeTip.position;
+    void Start()
+    {
+        lastTipPos = bladeTip.position;
+        audioSource = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody>();
+    }
 
     public event Action EnemyCut;
     private Rigidbody lastTarget;
+    private void Update()
+    {
+        float distanceMoved = Vector3.Distance(transform.position, lastPosition);
+
+        if (distanceMoved > moveThreshold)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+                audioSource.Play();
+            }
+        }
+        lastPosition = transform.position;
+    }
 
     void FixedUpdate()
     {
@@ -29,7 +53,7 @@ public class SwordSlicer : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (((1 << other.gameObject.layer) & sliceableLayer) == 0) return;
-        if (tipVelocity.magnitude < minSwingSpeed) return; // ignore slow bumps
+        if (tipVelocity.magnitude < minSwingSpeed) return;
 
         TrySlice(other.gameObject);
     }

@@ -9,6 +9,9 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField] private float timer;
     [SerializeField] private float sceneTransitionTime;
     [SerializeField] private Slider slider;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip victory;
+    [SerializeField] private AudioClip loss;
 
     private float _actualTime;
     private bool _isFinished;
@@ -42,9 +45,7 @@ public class PlayerLogic : MonoBehaviour
             _isFinished = true;
             run.gamesLost++;
 
-            //PlayBombAnimation
-
-            StartCoroutine(ChangeMiniGame());
+            StartCoroutine(PlaySoundThenChangeMiniGame(loss));
         }
 
         if(_isFinished && !_isChanging)
@@ -53,10 +54,16 @@ public class PlayerLogic : MonoBehaviour
 
             run.gamesWon++;
 
-            //YeeyAnimation
+            
 
-            StartCoroutine(ChangeMiniGame());
+            StartCoroutine(PlaySoundThenChangeMiniGame(victory));
         }
+    }
+    private IEnumerator PlaySoundThenChangeMiniGame(AudioClip audioclip)
+    {
+        audioSource.PlayOneShot(audioclip);
+        yield return new WaitForSeconds(audioclip.length);
+        StartCoroutine(ChangeMiniGame());
     }
 
     private IEnumerator ChangeMiniGame()
