@@ -12,6 +12,7 @@ public class PlayerLogic : MonoBehaviour
 
     private float _actualTime;
     private bool _isFinished;
+    private bool _isChanging;
 
     private int point = 0;
     public int Points => point;
@@ -20,10 +21,12 @@ public class PlayerLogic : MonoBehaviour
 
     private void Start()
     {
+        _isFinished = false;
+        _isChanging = false;
+        StopAllCoroutines();
         if(slider==null) return;
         slider.value = 1;
         _actualTime = timer;
-        _isFinished = false;
     }
 
     private void Update()
@@ -33,8 +36,9 @@ public class PlayerLogic : MonoBehaviour
         _actualTime -= Time.deltaTime;
         slider.value = _actualTime/timer;
 
-        if (_actualTime <= 0 && !_isFinished)
+        if (_actualTime <= 0 && !_isFinished && !_isChanging)
         {
+            _isChanging = true;
             _isFinished = true;
             run.gamesLost++;
 
@@ -43,22 +47,25 @@ public class PlayerLogic : MonoBehaviour
             StartCoroutine(ChangeMiniGame());
         }
 
-        if( _isFinished)
+        if(_isFinished && !_isChanging)
         {
+            _isChanging = true;
+
             run.gamesWon++;
 
             //YeeyAnimation
 
             StartCoroutine(ChangeMiniGame());
         }
-
-        Debug.Log("Is Finished?: "+_isFinished);
     }
 
     private IEnumerator ChangeMiniGame()
     {
-        Debug.Log("Cabou");
-        yield return null;
+        run.timeTaken += - (_actualTime - timer);
+
+        YieldInstruction wfs = new WaitForSeconds(sceneTransitionTime);
+
+        yield return wfs;
 
         SceneManager.LoadScene(run.GetScene());
     }

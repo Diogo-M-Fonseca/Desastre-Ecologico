@@ -1730,6 +1730,10 @@ PrefabInstance:
       propertyPath: uiScript
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5416366573828940067, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
+      propertyPath: sceneTransitionTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7505864054843864789, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
       propertyPath: player
       value: 

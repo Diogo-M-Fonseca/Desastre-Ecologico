@@ -23,13 +23,13 @@ public class RunData : ScriptableObject
 
     public string GetScene()
     {
-        foreach(string s in runScenes)
-            Debug.Log("Scene name: " +s);
-        int index = Random.Range(0, runScenes.Count);
-        string scene = runScenes[index];
-
         if (runScenes.Count <= 0)
             return finalScene;
+
+        Debug.Log("I occurred!");
+
+        int index = Random.Range(0, runScenes.Count);
+        string scene = runScenes[index];
 
         runScenes.RemoveAt(index);
 

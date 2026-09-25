@@ -1225,6 +1225,10 @@ PrefabInstance:
       propertyPath: uiScript
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5416366573828940067, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
+      propertyPath: sceneTransitionTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7876737060566772565, guid: bc6a1b218bf8bab45b1f476a25480c9d, type: 3}
       propertyPath: m_Size.x
       value: 0.1
