@@ -664,6 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f37fef4a76e474eb3fd531caa31a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Scripts::Catch
+  clip: {fileID: 8300000, guid: 7384e1430ac823041ab926c24d518ebc, type: 3}
 --- !u!4 &397110042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 425182877608995888, guid: 184a098d4f4cdeb4ba481bd530aab741, type: 3}
@@ -804,6 +805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f37fef4a76e474eb3fd531caa31a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Scripts::Catch
+  clip: {fileID: 8300000, guid: 7384e1430ac823041ab926c24d518ebc, type: 3}
 --- !u!4 &414187309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 425182877608995888, guid: 184a098d4f4cdeb4ba481bd530aab741, type: 3}
@@ -1337,6 +1339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f37fef4a76e474eb3fd531caa31a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Scripts::Catch
+  clip: {fileID: 8300000, guid: 7384e1430ac823041ab926c24d518ebc, type: 3}
 --- !u!4 &708831064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 425182877608995888, guid: 184a098d4f4cdeb4ba481bd530aab741, type: 3}
@@ -1638,6 +1641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f37fef4a76e474eb3fd531caa31a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Scripts::Catch
+  clip: {fileID: 8300000, guid: 7384e1430ac823041ab926c24d518ebc, type: 3}
 --- !u!54 &836713907
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2617,6 +2621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f37fef4a76e474eb3fd531caa31a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Scripts::Catch
+  clip: {fileID: 8300000, guid: 7384e1430ac823041ab926c24d518ebc, type: 3}
 --- !u!4 &1999610206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 425182877608995888, guid: 184a098d4f4cdeb4ba481bd530aab741, type: 3}
